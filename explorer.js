@@ -7,7 +7,7 @@ const path = require("path")
 function folder() {
     let datas = fs.readdirSync(path.resolve(__dirname, "public"))
 
-    let datafiles = datas.filter(data => data.includes('.html'));
+    let datafiles = datas.filter(data => data.includes('.css'));
 
     datas.forEach(res => {
         fs.lstatSync(path.resolve(__dirname,"public", res)).isDirectory()
